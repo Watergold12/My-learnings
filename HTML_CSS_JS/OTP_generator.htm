@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Generator</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+        color: #333;
+      }
+
+      #otpContainer {
+        width: auto;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      #otpDisplay {
+        box-sizing: border-box;
+        height: 55px;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        padding: 10px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 2em;
+      }
+
+      button {
+        width: 200px;
+        padding: 15px 0;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #d4d4d4;
+      }
+    </style>
+    <script>
+      const generatedOTPs = new Set(); // Store generated OTPs in a Set to ensure uniqueness
+
+      function generateOTP() {
+        const otpLength = 4;
+        let otp = "";
+
+        while (true) {
+          for (let i = 0; i < otpLength; i++) {
+            otp += Math.floor(Math.random() * 9);
+          }
+
+          // Check if the generated OTP is not already in the set
+          if (!generatedOTPs.has(otp)) {
+            generatedOTPs.add(otp);
+            break; // Break the loop if OTP is unique
+          } else {
+            otp = ""; // Reset OTP if it's a duplicate
+          }
+        }
+
+        return otp;
+      }
+
+      function displayOTP() {
+        const otp = generateOTP();
+        document.getElementById("otpDisplay").innerText = otp;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="otpContainer">
+      <h1>Generate OTP</h1>
+      <p id="otpDisplay"></p>
+      <button onclick="displayOTP()">Generate OTP</button>
+    </div>
+  </body>
+</html>
