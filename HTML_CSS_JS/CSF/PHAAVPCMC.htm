@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>Criminal Service</title>
+<style>
+    h1{
+        border-radius: 20px;
+        width: 700px;
+        border: solid 3px #114557;
+        background-image: radial-gradient(circle at center, #97BC62, #2C5F2D);
+        align-content: center;
+    }
+
+    table{
+        border-radius: 20px;
+        background-color: rgb(12, 80, 29);
+    }
+
+    body{
+        background: linear-gradient(to bottom, #97BC62, #2C5F2D);
+    }
+
+    td{
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    tr{
+        background: radial-gradient(circle, #97BC62, #2C5F2D);
+        font-size: 20px;
+    }
+
+    img{
+        border: solid 2px bisque;
+        border-radius: 100px;
+    }
+
+    input{
+        border-radius: 10px;
+    }
+
+    textarea{
+        border-radius: 10px;
+        border: solid 2px black;
+    }
+
+    /* Increase the size of the radio button */
+    input[type="radio"] {
+        transform: scale(1.5); /* Increase scale factor as needed */
+        margin-right: 8px; /* Optional: Add margin for spacing */
+    }
+
+    input[type="submit"]{
+        font-size: 20px;
+    }
+
+    input[type="reset"]{
+        font-size: 20px;
+    }
+
+    input[type="file"]{
+        font-size: 20px;
+        border-radius: 20px;
+        border: solid 3px #114557;
+        width: 124px;
+    }
+
+    a {
+       background-color: white;
+       font-size: 20px;
+       border-radius: 10px;
+       padding: 10px;
+       display: block;
+       text-align: center;
+       margin: 10px;
+       color: slateblue;
+       width: 200px;
+    }
+
+    marquee{
+        font-size: 40px;
+    }
+</style>
+</head>
+<body>
+    <center><h1>CRIMINAL SERVICE OF PCMC</h1></center>
+    
+    <img src="Images\assassin.jpg"
+      alt="Vesper"
+      height="300px"
+      width="300px"
+      style="float: left">
+    
+    <img src="Images\assassin.jpg"
+      alt="Vesper"
+      height="300px"
+      width="300px"
+      style="float: right">
+
+    <form action="" method="post" name="table form">
+      <table class="tab" align="center" border="3" cellpadding="0" cellspacing="5" width="50%">
+        <tr>
+            <td>Customer Name:</td>
+            <td><input type="text" name="name" value="" size="20" maxlength="15">
+            </td>
+        </tr>
+
+        <tr>
+            <td>What do you need from us?</td>
+            <td>
+                <input type="radio" name="qualification" value="">Brutal Murder
+                <input type="radio" name="qualification" value="">Kidnap
+                <input type="radio" name="qualification" value="">Assassination
+                <input type="radio" name="qualification" value="">Psycho Torture
+            </td>
+        </tr>
+
+        <tr>
+            <td>Name of the victim:</td>
+            <td>
+            <textarea name="name" maxlength="30">
+            </textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Height:(in cm)</td>
+            <td><input type="number" name="number" value="" size="4" maxlength="8">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Weight:(in kgs)</td>
+            <td><input type="number" name="number" value="" size="4" maxlength="8">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mark(scar or mole) for identification:</td>
+            <td>
+            <textarea name="name" maxlength="500">
+            </textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Photo of victim:</td>
+            <td>
+            <p>Click on the "Choose File" button to upload a file:</p>
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+            </td>
+        </tr>
+
+        <tr>
+            <td>                       </td>
+            <td>
+            <input type="submit" name="submit" value="Submit">
+            <input type="reset" name="reset" value="Reset">
+            </td>
+            </tr>
+      </table>
+    </form>
+
+<Center><U><h2><A href="RPCS.htm" >Reset Password</A></U></h2></Center> <!--RPCS File-->
+<Center><U><h2><A href="FUCS.htm" >Forgot Username?</A></U></h2></Center> <!--FUCS File-->
+<Center><U><h2><A href="LPCS.htm" >Not registered, Newbie. Register here!!</A></U></h2></Center><!--LPCS File-->
+<marquee bgcolor="#8BD20E" direction="right">At your service....</marquee>
+</body>
+</html>
