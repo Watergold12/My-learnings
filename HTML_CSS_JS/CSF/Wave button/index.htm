@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Effect Button</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button-wave {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 0.4s linear;
+      }
+
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="waveBtn">Click me</button>
+    <script>
+      document
+        .getElementById("waveBtn")
+        .addEventListener("click", function (e) {
+          const wave = document.createElement("span");
+          wave.className = "button-wave";
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          wave.style.left = `${x}px`;
+          wave.style.top = `${y}px`;
+          this.appendChild(wave);
+          setTimeout(() => {
+            wave.remove();
+          }, 400);
+        });
+    </script>
+  </body>
+</html>
