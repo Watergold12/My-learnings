@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krill - Login</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #656565;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #656565;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: #212121; /* Dark gray background for the header */
+        color: #ffffff; /* White text color */
+        padding: 15px 0;
+      }
+
+      /* Navigation Bar Styling */
+      .nav_bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; /* Ensure relative positioning for absolute child */
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo a {
+        color: #ffffff; /* White text color for the logo */
+        font-size: 24px;
+        text-decoration: none;
+      }
+
+      /* Nav Links Styling */
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+      }
+
+      #logo {
+        height: 70px;
+        width: 70px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: solid 2px #ffffff;
+        transition: transform 0.3s ease; /* Add transition effect */
+      }
+
+      img:hover {
+        transform: scale(1.1); /* Scale up on hover */
+      }
+
+      .nav-links li {
+        margin-right: 15px;
+      }
+
+      .nav-links a {
+        color: #ffffff; /* White text color for the links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #cccccc; /* Light gray text color on hover */
+      }
+
+      /* Sliding Bar Effect */
+      .nav_bar::after {
+        content: "";
+        position: absolute;
+        bottom: -3px; /* Position the bar below the nav bar */
+        left: 0;
+        width: 0%;
+        height: 3px; /* Height of the sliding bar */
+        background-color: #ffffff; /* White color for the sliding bar */
+        transition: width 0.3s ease;
+      }
+
+      .nav_bar:hover::after {
+        width: 100%; /* Slide in fully on hover */
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      /* Content Styles */
+      .content {
+        margin-top: 20px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 2px solid #ffffff; /* White border */
+        background-color: transparent;
+        color: #ffffff; /* White text color */
+      }
+
+      button[type="submit"] {
+        padding: 10px;
+        border: solid 2px #ffffff; /* White border */
+        border-radius: 4px;
+        background-color: #000000; /* White background */
+        color: #ffffff; /* Black text color */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #e0e0e0; /* Light gray background on hover */
+        color: #000000; /* Black text color */
+        font-weight: bold;
+      }
+
+      /* Login Page Styles (Optional) */
+      .login-container {
+        background-color: #000000; /* Black background */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        color: #ffffff; /* White text color */
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Navigation bar section -->
+      <nav>
+        <!--from here till-->
+        <div class="nav_bar">
+          <div class="logo">
+            <img src="Krill.png" id="logo" alt="Krill" />
+            <a href="index.html">Krill</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">My List</a></li>
+          </ul>
+        </div>
+        <!--here it is the container division-->
+      </nav>
+    </header>
+
+    <!-- Content Area -->
+    <div class="container content">
+      <!-- Login Page Content -->
+      <div class="login-container">
+        <h2>Login to Krill</h2>
+        <form action="#" method="POST">
+          <label class="username" for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <p>&copy; 2024 Krill. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
