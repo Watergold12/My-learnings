@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Reveal Text</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: black;
+      }
+
+      div.content {
+        height: 150vh; /* Height longer than viewport for scrolling */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.reveal-text {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="reveal-text" id="revealText">
+        This is hidden text. Scroll down to reveal it.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
