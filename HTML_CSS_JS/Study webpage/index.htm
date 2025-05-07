@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Question</title>
+    <style>
+      .button {
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1 id="question">Do you want to study?</h1>
+      <button class="button" id="yesBtn">Yes</button>
+      <button class="button" id="noBtn" onclick="increaseSize()">No</button>
+    </center>
+
+    <script>
+      let questionIndex = 0;
+      const questions = [
+        "Do you want to study?",
+        "Are you sure you don't want to study?",
+        "Really, you don't want to study?",
+        "Last chance, do you want to study?",
+        "Are you going to sell pani-puri?",
+        "No, this time Bhel-puri?",
+        "Lazy to study was never an option, aren't you?",
+        "Why, why, why?",
+      ];
+
+      function increaseSize() {
+        const noBtn = document.getElementById("noBtn");
+        const newSize = parseInt(window.getComputedStyle(noBtn).fontSize) + 2;
+        noBtn.style.fontSize = newSize + "px";
+
+        if (questionIndex < questions.length - 1) {
+          questionIndex++;
+        } else {
+          questionIndex = 0;
+        }
+        document.getElementById("question").textContent =
+          questions[questionIndex];
+      }
+    </script>
+  </body>
+</html>
