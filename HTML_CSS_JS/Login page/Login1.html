@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #e8e8e8; /* Added for visibility */
+      }
+
+      .login {
+        border: 1px solid black;
+        width: 400px;
+        height: 500px;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk6_fPSbcifoC2kcoGYrlPamNaLCZw2L0h77TbW0EwFMirtNyAlKoWjgCcqVeFL2yC8cw&usqp=CAU);
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 4px;
+        color: #333;
+        box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.4);
+      }
+
+      form {
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: brightness(40%);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      h1 {
+        font-weight: normal;
+        font-size: 24px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        margin-bottom: 60px;
+      }
+
+      label {
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding-left: 10px;
+      }
+
+      input {
+        background: rgba(255, 255, 255, 0.3);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0 20px;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background: rgb(45, 126, 231);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+        border: none;
+        margin: 10px 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        color: white;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <form action="" method="post" name="login" enctype="multipart/form-data">
+        <h1>Log In</h1>
+        <label>Username</label>
+        <input type="text" />
+        <label>Password</label>
+        <input type="password" />
+        <button>Log In</button>
+      </form>
+    </div>
+  </body>
+</html>
