@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+#calendar{
+    /* border-radius: 15px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    width: calc(45% - 10px);
+    height: 500%; */
+    width: calc(45% - 5px);
+    height: 75vh;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+}
