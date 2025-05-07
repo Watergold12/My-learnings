@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octagonal Button</title>
+    <style>
+      /* CSS for octagonal button with shadow effect */
+      .octagon-button {
+        width: 120px;
+        height: 50px;
+        background-color: #4caf50; /* Green background color (change as needed) */
+        color: #fff; /* Text color */
+        border: none;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px; /* Center text vertically */
+        cursor: pointer;
+        clip-path: polygon(
+          15% 0,
+          85% 0,
+          /* Top left and top right corners */ 100% 15%,
+          100% 85%,
+          /* Right top and right bottom corners */ 85% 100%,
+          15% 100%,
+          /* Bottom right and bottom left corners */ 0 85%,
+          0 15% /* Left bottom and left top corners */
+        );
+      }
+
+      .octagon-button:before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+        transform: rotate(45deg);
+        z-index: -1;
+        transition: all 0.3s ease;
+      }
+
+      .octagon-button:hover:before {
+        top: 0;
+        left: 0;
+      }
+
+      .octagon-button span {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="octagon-button"><span>Click Me</span></button>
+  </body>
+</html>
