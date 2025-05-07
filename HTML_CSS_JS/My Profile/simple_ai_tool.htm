@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple AI Tool</title>
+  </head>
+  <body>
+    <h1>Simple AI Tool</h1>
+    <label for="userInput">You:</label>
+    <input type="text" id="userInput" />
+    <button onclick="getResponse()">Send</button>
+    <p id="aiResponse"></p>
+
+    <script>
+      function getResponse() {
+        var userInput = document
+          .getElementById("userInput")
+          .value.toLowerCase();
+        var aiResponse = document.getElementById("aiResponse");
+
+        // Define responses based on user input
+        var responses = {
+          hello: "Hello! How can I help you today?",
+          "how are you":
+            "I'm just a program, so I don't have feelings, but thanks for asking!",
+          bye: "Goodbye! Have a great day!",
+          program: "Here, it is a simple code on html.",
+          default:
+            "I'm sorry, I don't understand. Can you please rephrase that?",
+        };
+
+        // Check if the input matches any predefined responses
+        if (userInput in responses) {
+          aiResponse.innerText = "AI: " + responses[userInput];
+        } else {
+          aiResponse.innerText = "AI: " + responses["default"];
+        }
+      }
+    </script>
+  </body>
+</html>
