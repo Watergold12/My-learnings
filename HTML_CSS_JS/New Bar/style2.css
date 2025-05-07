@@ -1,0 +1,86 @@
+.nav-bar {
+    display: flex;
+    align-items: center; /* Optional: Center the items vertically */
+}
+
+/* Home section */
+.home {
+    position: relative;
+    display: inline-block; /* Add this line */
+}
+
+/* Apps section */
+#box1, #box2, #box3, #box4 {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    position: absolute;
+    border-radius: 5px;
+}
+
+#box2 {
+    left: 35px;
+}
+
+#box3 {
+    top: 55px;
+}
+
+#box4 {
+    top: 55px;
+    left: 35px;
+}
+
+/* User section */
+#user {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    margin: 20px;
+}
+
+#user::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    background-color: grey;
+    top: 22px;
+    left: -10px;
+    border-radius: 50% 50% 0 0;
+}
+
+/* Mic section */
+#mic {
+    height: 20px;
+    width: 10px;
+    border: 2px solid black;
+    border-radius: 50% / 40%;
+    position: absolute;
+}
+
+#mic::before, #mic::after {
+    content: "";
+    position: absolute;
+}
+
+#mic::before {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: transparent transparent black black;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: -7px;
+}
+
+#mic::after {
+    height: 11px;
+    width: 2px;
+    background-color: black;
+    top: 25px;
+    left: 4px;
+}
