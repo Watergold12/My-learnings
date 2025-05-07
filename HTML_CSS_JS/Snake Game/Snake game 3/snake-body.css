@@ -1,0 +1,6 @@
+.snake-body{
+    background-color: #FFB6C1;
+    border: 1px solid #FF69B4;
+    box-sizing: border-box;
+    border-radius: 50%;    
+}
